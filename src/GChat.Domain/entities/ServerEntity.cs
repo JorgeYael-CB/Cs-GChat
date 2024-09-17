@@ -9,6 +9,8 @@ public class ServerEntity: Entity
     public ICollection<UserServerEntity>? UserServers { get; set; }
     public ICollection<UserEntity>? Users { get; set; }
 
+    public ICollection<MessageEntity>? Messages { get; set; }
+
     public string? UserOwnedId { get; set; }
     public UserEntity? Owner { get; set; }
 

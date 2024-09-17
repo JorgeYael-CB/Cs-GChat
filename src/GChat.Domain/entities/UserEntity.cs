@@ -25,6 +25,6 @@ public class UserEntity: Entity
     public ICollection<UserActivityEntity>? UserActivities { get; set; }
     public ICollection<ActivityEntity>? Activities { get; set; }
 
-    public string? SuscrtiptionId { get; set; }
-    public ICollection<Suscription>? Suscriptions { get; set; }
+    public string? SubscriptionId { get; set; }
+    public Subscription? Subscription { get; set; }
 }

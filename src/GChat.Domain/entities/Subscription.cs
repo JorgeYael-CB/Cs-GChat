@@ -3,7 +3,7 @@ namespace GChat.Domain.entities;
 
 
 
-public class Suscription: Entity
+public class Subscription: Entity
 {
     public string? Type { get; set; }
 
