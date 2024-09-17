@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{76AA77F2-526A-4C68-A608-F144B4C51915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GChat.WebApi", "src\GChat.WebApi\GChat.WebApi.csproj", "{D808D3A0-B5BB-467B-96FB-AE60CA203835}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GChat.Domain", "src\GChat.Domain\GChat.Domain.csproj", "{BBD01184-77C5-49E6-B45C-C6F7D7C63317}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GChat.Infrastructure", "src\GChat.Infrastructure\GChat.Infrastructure.csproj", "{841B3152-C37A-4283-B9B4-E1E82F1DB626}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D808D3A0-B5BB-467B-96FB-AE60CA203835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D808D3A0-B5BB-467B-96FB-AE60CA203835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D808D3A0-B5BB-467B-96FB-AE60CA203835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D808D3A0-B5BB-467B-96FB-AE60CA203835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBD01184-77C5-49E6-B45C-C6F7D7C63317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBD01184-77C5-49E6-B45C-C6F7D7C63317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBD01184-77C5-49E6-B45C-C6F7D7C63317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBD01184-77C5-49E6-B45C-C6F7D7C63317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{841B3152-C37A-4283-B9B4-E1E82F1DB626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841B3152-C37A-4283-B9B4-E1E82F1DB626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841B3152-C37A-4283-B9B4-E1E82F1DB626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841B3152-C37A-4283-B9B4-E1E82F1DB626}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D808D3A0-B5BB-467B-96FB-AE60CA203835} = {76AA77F2-526A-4C68-A608-F144B4C51915}
+		{BBD01184-77C5-49E6-B45C-C6F7D7C63317} = {76AA77F2-526A-4C68-A608-F144B4C51915}
+		{841B3152-C37A-4283-B9B4-E1E82F1DB626} = {76AA77F2-526A-4C68-A608-F144B4C51915}
+	EndGlobalSection
+EndGlobal
