@@ -8,6 +8,16 @@ namespace GChat.Infrastructure.persistence;
 
 public class GChatDbContext: DbContext
 {
+    //? 4.-
+
+    public DbSet<UserEntity> Users { get; set; }
+    public DbSet<ActivityEntity> Activities { get; set; }
+    public DbSet<ServerEntity> Servers { get; set; }
+    public DbSet<MessageEntity> Messages { get; set; }
+    public DbSet<Subscription> Subscriptions { get; set; }
+    public DbSet<PhotoEntity> Photos { get; set; }
+    public DbSet<LikeEntity> Likes { get; set; }
+
 
     //? 1.- Cadena de conexion
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -80,5 +90,31 @@ public class GChatDbContext: DbContext
 
 
         //? relacion de muchos a muchos
+        modelBuilder.Entity<UserEntity>()
+            .HasMany( u => u.Servers )
+            .WithMany( s => s.Users )
+            .UsingEntity<UserServerEntity>(
+                us => us.HasOne( us => us.Server )
+                    .WithMany( s => s.UserServers)
+                    .HasForeignKey( u => u.ServerId ),
+                us => us.HasOne( us => us.User )
+                    .WithMany( u => u.UserServers )
+                    .HasForeignKey( u => u.UserId ),
+                us => us.HasKey( us => new {us.UserId, us.Server} )
+            );
+
+        modelBuilder.Entity<UserEntity>()
+            .HasMany( u => u.Activities )
+            .WithMany( a => a.Users )
+            .UsingEntity<UserActivityEntity>(
+                ua => ua.HasOne( ua => ua.Activity )
+                    .WithMany( a => a.UserActivities )
+                    .HasForeignKey( ua => ua.ActivityId ),
+                ua => ua.HasOne( ua => ua.User )
+                    .WithMany( a => a.UserActivities )
+                    .HasForeignKey( ua => ua.UserId )
+            );
     }
+
+
 }
